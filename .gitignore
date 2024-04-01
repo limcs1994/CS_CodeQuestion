@@ -1,2 +1,5 @@
 .vs/*
 obj/*
+bin/Debug/net8.0/*.dll
+bin/Debug/net8.0/*.pdb
+bin/Debug/net8.0/*.exe

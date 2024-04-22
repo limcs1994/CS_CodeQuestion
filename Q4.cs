@@ -19,13 +19,16 @@ namespace CS_CodeQuestion
         static void Main(string[] args)
         {
             string inputString = "AbcDefGhIJ";
-            StringBuilder strBuilder = new StringBuilder(inputString);
-            strBuilder.
+            StringBuilder strBuilder = new StringBuilder();
 
             for (int i = 0; i < inputString.Length; i++)
             {
-                strBuilder.Append(inputString[i]);
+                strBuilder.Append(inputString[inputString.Length -1 - i]);
             }
+
+            Console.WriteLine("Reversed string: " + strBuilder.ToString());
+
+            Console.ReadLine();
         }
     }
 }

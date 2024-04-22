@@ -15,13 +15,16 @@ namespace CS_CodeQuestion
 
     internal class Q3
     {
+        static StringBuilder sb = new StringBuilder();
+
         static void Main(string[] args)
         {
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(fibonacci(i).ToString() + ", ");
+                sb.Append(fibonacci(i).ToString()).Append(",");
             }
 
+            Console.WriteLine(string.Format("First {0} fibonacci number: {1}", 10, sb.ToString()));
             Console.ReadLine();
         }
 
@@ -29,10 +32,15 @@ namespace CS_CodeQuestion
         {
             if (n <= 1)
             {
+                //Console.WriteLine("return " + n.ToString());
                 return n;
             }
             else
             {
+                int num1 = fibonacci(n - 1);
+                int num2 = fibonacci(n - 2);
+                //Console.WriteLine(string.Format("Num1: {0}   Num2: {1}", num1.ToString(), num2.ToString()));
+                //Console.WriteLine("return " + (num1 + num2).ToString());
                 return fibonacci(n - 1) + fibonacci(n - 2);
             }
         }

@@ -16,5 +16,18 @@ namespace CS_CodeQuestion
 
     internal class Q11
     {
+        static void Main(string[] args)
+        {
+            int num1 = 13;
+            int num2 = 5;
+
+            Console.WriteLine(string.Format("Input num1: {0} , num2: {1}", num1.ToString(), num2.ToString()));
+            num1 = num1 + num2;
+            num2 = num1 - num2;
+            num1 = num1 - num2;
+
+            Console.WriteLine(string.Format("Swapped num1: {0} , num2: {1}", num1.ToString(), num2.ToString()));
+            Console.ReadLine();
+        }
     }
 }

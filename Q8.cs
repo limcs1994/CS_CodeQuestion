@@ -16,5 +16,37 @@ namespace CS_CodeQuestion
 
     internal class Q8
     {
+        static void Main(string[] args)
+        {
+            List<int> inputList = new List<int>() { 3, 2, 8, 4, 1, 6 };
+            bool isClean = false;
+
+            Console.WriteLine("Unsorted: " + string.Join(", ", inputList));
+
+            while (!isClean)
+            {
+                isClean = true;
+
+                for (int i = 0; i < inputList.Count - 1; i++)
+                {
+                    if (inputList[i] > inputList[i + 1])
+                    {
+                        int temp = inputList[i + 1];
+                        inputList[i + 1] = inputList[i];
+                        inputList[i] = temp;
+                        isClean = false;
+                    }
+                }
+            }
+
+            StringBuilder sb = new StringBuilder();
+            foreach (int num in inputList)
+            {
+                sb.Append(num.ToString()).Append(", ");
+            }
+
+            Console.WriteLine("Sorted: " + sb.ToString());
+            Console.ReadLine();
+        }
     }
 }

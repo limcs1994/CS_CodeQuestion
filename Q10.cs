@@ -16,5 +16,20 @@ namespace CS_CodeQuestion
 
     internal class Q10
     {
+        static void Main(string[] args)
+        {
+            List<int> inputList = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
+            Console.WriteLine("Input list: " + string.Join(", ", inputList));
+
+            for (int i = 0; i < inputList.Count() / 2; i++)
+            {
+                int tempInt = inputList[i];
+                inputList[i] = inputList[inputList.Count() - i - 1];
+                inputList[inputList.Count() - i - 1] = tempInt;
+            }
+
+            Console.WriteLine("Reverse list: " + string.Join(", ", inputList));
+            Console.ReadLine();
+        }
     }
 }

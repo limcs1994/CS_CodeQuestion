@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>CS_CodeQuestion.Q11</StartupObject>
+    <StartupObject>CS_CodeQuestion.Q13</StartupObject>
   </PropertyGroup>
 
 </Project>

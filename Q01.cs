@@ -23,34 +23,49 @@ namespace CS_CodeQuestion
 
     internal class Q01
     {
+        //static void Main(string[] args)
+        //{
+        //    string inputString = "Hi, how are you recently? ^-^";
+        //    string tempString = string.Empty;
+        //    string finalString = string.Empty;
+
+        //    Console.WriteLine("Input string: " + inputString);
+
+        //    for (int i = 0; i < inputString.Length; i++)
+        //    {
+        //        if ((i == inputString.Length - 1) && (tempString.Length > 0))
+        //        {
+        //            tempString = tempString + inputString[i];
+        //            finalString = tempString + " " + finalString;
+        //        }
+        //        else if (inputString[i] == ' ')
+        //        {
+        //            finalString = tempString + " " + finalString;
+        //            tempString = string.Empty;
+        //        }
+        //        else
+        //        {
+        //            tempString = tempString + inputString[i];
+        //        }
+        //    }
+
+        //    Console.WriteLine("Output string: " + finalString);
+
+        //    Console.ReadLine();
+        //}
+
         static void Main(string[] args)
         {
-            string inputString = "Hi, how are you recently? ^-^";
-            string tempString = string.Empty;
-            string finalString = string.Empty;
+            string abc = "abc dsd asjkdfs";
+            string[] abcArr = abc.Split(' ');
 
-            Console.WriteLine("Input string: " + inputString);
+            StringBuilder sb = new StringBuilder();
 
-            for (int i = 0; i < inputString.Length; i++)
+            for (int i = abcArr.Length - 1; i >= 0; i++)
             {
-                if ((i == inputString.Length - 1) && (tempString.Length > 0))
-                {
-                    tempString = tempString + inputString[i];
-                    finalString = tempString + " " + finalString;
-                }
-                else if (inputString[i] == ' ')
-                {
-                    finalString = tempString + " " + finalString;
-                    tempString = string.Empty;
-                }
-                else
-                {
-                    tempString = tempString + inputString[i];
-                }
+                sb = sb.Append(abcArr[i]);
             }
-
-            Console.WriteLine("Output string: " + finalString);
-
+            Console.WriteLine(sb.ToString());
             Console.ReadLine();
         }
     }
